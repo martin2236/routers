@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.HASH_REF_ebdb462fc153d31b077a4eb5a5e5b2f2.css">
+    <script defer="" src="/index.HASH_REF_5431c11471991b0bc61bffb8376f37e2.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">logo</div>
+            <form class="header__form" action="" method="GET">
+                <input class="header__form-input" type="text">
+                <input class="header__form-boton" type="input" name="buscar" value="buscar">
+            </form>
+        </header>
+        <section class="mail">
+            <div class="mail__buttons">
+                <button class="mail__button-inbox"><a class="link" href="">INBOX</a></button>
+                <button class="mail__button-sent"><a class="link" href="">SENT</a></button>
+            </div>
+            <div class="mail__cont">
+                <h3 class="mail__cont-h3">inbox</h3>
+            <div class="mail__cont-noti">
+                <p class="mail__cont-noti--p">un email</p>
+                <img class="mail__cont-noti--img" src="/Polygon%201.HASH_REF_ae62cea49f1d76c8461cba08daa5fa5c.png" alt="boton">
+            </div> 
+        </div>
+            
+        </section>
+    </div>
+</body>
+</html>

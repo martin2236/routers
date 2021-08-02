@@ -1,0 +1,12 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "router", ()=>router
+);
+parcelHelpers.export(exports, "goto", ()=>goto
+);
+function router(direccion) {
+}
+function goto(direccion) {
+    history.pushState({
+    }, "", direccion);
+}

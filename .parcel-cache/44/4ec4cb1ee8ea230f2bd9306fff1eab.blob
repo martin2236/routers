@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <img class="header__logo" src="7cb2e8dea17182042075bc3e5cc23628" alt="logo">
+            <form class="header__form" action="" method="GET">
+                <input class="header__form--input" type="text">
+                <input class="header__form--boton" type="input" name="buscar" value="buscar">
+            </form>
+        </header>
+        <section class="mail">
+            <div class="mail__buttons">
+                <button class="mail__button-inbox"></button>
+                <button class="mail__button-sent"></button>
+            </div>
+            <h3 class="mail__h3">inbox</h3>
+            <div class="mail__noti">
+                <p class="mail__noti-p">un email</p>
+                <a href=""><img class="mail__noti-img" src="7cb2e8dea17182042075bc3e5cc23628" alt="boton"></a>
+            </div>
+        </section>
+    </div>
+</body>
+</html><script src="4ad0979c663ae1096c31c630282fb70e"></script>

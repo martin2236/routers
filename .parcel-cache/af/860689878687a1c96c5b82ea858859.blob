@@ -1,0 +1,5 @@
+function main() {
+    const botonMail = document.querySelector(".mail__button-inbox");
+    console.log(botonMail);
+}
+main();

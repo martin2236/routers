@@ -1,0 +1,12 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    background-color: #000;
+    height: 94px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}

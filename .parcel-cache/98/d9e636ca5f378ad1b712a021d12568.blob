@@ -1,0 +1,4 @@
+function goto(direccion) {
+    history.pushState({
+    }, "", direccion);
+}

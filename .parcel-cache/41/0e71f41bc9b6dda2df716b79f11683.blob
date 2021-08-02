@@ -1,0 +1,5 @@
+function main() {
+    const botonMail = document.querySelector(".mail__cont-noti--img");
+    console.log(botonMail);
+}
+main();

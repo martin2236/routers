@@ -1,0 +1,5 @@
+function main() {
+    const botonMail = document.getElementsByClassName("mail__button-inbox")[0];
+    console.log(botonMail);
+}
+main();

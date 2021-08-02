@@ -1,0 +1,8 @@
+function main() {
+    const botonMail = document.querySelector(".mail__cont-noti--img");
+    botonMail.addEventListener("click", (e)=>{
+        e.stopPropagation;
+        console.log();
+    });
+}
+main();

@@ -1,0 +1,5 @@
+function main() {
+    const navBtn = document.querySelectorAll(".link");
+    console.log(navBtn);
+}
+main();

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+        <img src="/index.html" alt="logo">
+        <form action="" method="GET">
+            <input type="text">
+            <input type="input" name="buscar" value="buscar">
+        </form>
+    </header>
+    <div>
+        <button></button>
+        <button></button>
+        <h3>inbox</h3>
+        <div>
+            <p>un email</p>
+            <a href=""><img src="/index.html" alt="boton"></a>
+        </div>
+    </div>
+    <section>
+
+
+    </section>
+</body>
+</html><script src="/index.HASH_REF_42412dc50fd44bf0205308ab01a1c8c0.js"></script>

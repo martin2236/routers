@@ -1,0 +1,11 @@
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+.header{
+    width: 100%;
+    background-color: #000;
+    height: 94px;
+}
+
+/*# sourceMappingURL=index.HASH_REF_ebdb462fc153d31b077a4eb5a5e5b2f2.css.map */

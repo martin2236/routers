@@ -1,0 +1,17 @@
+var _handlerRouter = require("./handlerRouter");
+function main() {
+    const botonMail = document.querySelector(".mail__cont-noti--img");
+    const inbox = document.querySelector(".mail__button-inbox");
+    inbox.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        _handlerRouter.goto("inbox");
+    });
+    botonMail.addEventListener("click", (e)=>{
+        e.stopPropagation();
+        _handlerRouter.goto("/mails");
+    });
+    window.addEventListener("load", ()=>{
+        _handlerRouter.router(location.pathname);
+    });
+}
+main();

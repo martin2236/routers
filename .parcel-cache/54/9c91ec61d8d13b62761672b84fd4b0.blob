@@ -1,0 +1,9 @@
+function main() {
+    const botonMail = document.getElementsByClassName("mail__button-inbox");
+    console.log(botonMail);
+    botonMail.addEventListener("click", (e)=>{
+        e.stopPropagation;
+        console.log("perra");
+    });
+}
+main();
