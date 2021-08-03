@@ -1,0 +1,22 @@
+var _handlerRouter = require("./handlerRouter");
+function main() {
+    const botonMail = document.querySelectorAll(".mail__cont-noti--img");
+    const inbox = document.querySelector(".mail__button-inbox");
+    const sent = document.querySelector(".mail__button-sent");
+    function linkPreventDef(link) {
+        link.addEventListener("click", function rutaInbox(e) {
+            e.preventDefault();
+            let ruta = this.getAttribute("href");
+            _handlerRouter.goto(ruta);
+        });
+    }
+    sent.addEventListener("click", function rutaSent(e) {
+        e.preventDefault();
+        let ruta = this.getAttribute("href");
+        _handlerRouter.goto(ruta);
+    });
+    window.addEventListener("load", ()=>{
+        _handlerRouter.router(location.pathname);
+    });
+}
+main();

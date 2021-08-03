@@ -1,0 +1,30 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "router", ()=>router
+);
+parcelHelpers.export(exports, "goto", ()=>goto
+);
+var _inboxComp = require("./inbox-comp/inbox-comp");
+var _sentComp = require("./sent-comp/sent-comp");
+function router(direccion) {
+    console.log(direccion);
+    const rutas = [
+        {
+            path: /\/inbox/,
+            handler: _inboxComp.crearInbox
+        },
+        {
+            path: /\/sent/,
+            handler: _sentComp.crearSent
+        }
+    ];
+    for (const r of rutas)if (r.path.test(direccion)) {
+        const div = r.handler();
+        const contenedor = document.querySelector(".mail__cont");
+        contenedor.appendChild(div);
+    }
+}
+function goto(direccion) {
+    history.pushState({
+    }, "", direccion);
+}

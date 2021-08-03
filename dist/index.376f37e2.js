@@ -382,18 +382,23 @@ function hmrAcceptRun(bundle/*: ParcelRequire */ , id/*: string */ ) {
 
 },{}],"SGsfi":[function(require,module,exports) {
 var _handlerRouter = require("./handlerRouter");
+function buscaRutas(link) {
+    link.addEventListener("click", function rutaInbox(e) {
+        e.preventDefault();
+        let ruta = this.getAttribute("href");
+        _handlerRouter.goto(ruta);
+    });
+}
 function main() {
-    const botonMail = document.querySelector(".mail__cont-noti--img");
+    const botonMail = document.querySelectorAll(".mail__cont-noti--img");
     const inbox = document.querySelector(".mail__button-inbox");
     const sent = document.querySelector(".mail__button-sent");
-    inbox.addEventListener("click", (e)=>{
-        e.stopPropagation();
-        _handlerRouter.goto("/inbox");
+    console.log(sent);
+    botonMail.forEach((item)=>{
+        buscaRutas(item);
     });
-    inbox.addEventListener("click", (e)=>{
-        e.stopPropagation();
-        _handlerRouter.goto("/sent");
-    });
+    buscaRutas(inbox);
+    buscaRutas(sent);
     window.addEventListener("load", ()=>{
         _handlerRouter.router(location.pathname);
     });
@@ -407,15 +412,33 @@ parcelHelpers.export(exports, "router", ()=>router
 );
 parcelHelpers.export(exports, "goto", ()=>goto
 );
+var _inboxComp = require("./inbox-comp/inbox-comp");
+var _sentComp = require("./sent-comp/sent-comp");
 function router(direccion) {
-    console.log(direccion);
+    const rutas = [
+        {
+            path: /\/inbox/,
+            handler: _inboxComp.crearInbox
+        },
+        {
+            path: /\/sent/,
+            handler: _sentComp.crearSent
+        }
+    ];
+    for (const r of rutas)if (r.path.test(direccion)) {
+        const div = r.handler();
+        const contenedor = document.querySelector(".mail__cont");
+        if (contenedor.firstChild) contenedor.firstChild.remove();
+        contenedor.appendChild(div);
+    }
 }
 function goto(direccion) {
     history.pushState({
     }, "", direccion);
+    router(direccion);
 }
 
-},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"367CR":[function(require,module,exports) {
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR","./inbox-comp/inbox-comp":"3xhiI","./sent-comp/sent-comp":"4ZcjS"}],"367CR":[function(require,module,exports) {
 exports.interopDefault = function(a) {
     return a && a.__esModule ? a : {
         default: a
@@ -447,6 +470,30 @@ exports.export = function(dest, destName, get) {
     });
 };
 
-},{}]},["1vfup","SGsfi"], "SGsfi", "parcelRequire5c5e")
+},{}],"3xhiI":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "crearInbox", ()=>crearInbox
+);
+function crearInbox() {
+    const div = document.createElement("div");
+    div.innerHTML = `\n<h3 class="mail__cont-h3">inbox</h3>\n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="./src/imagenes/Polygon 1.png" alt="boton">\n</div> \n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="./src/imagenes/Polygon 1.png" alt="boton">\n</div> \n\n`;
+    return div;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}],"4ZcjS":[function(require,module,exports) {
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "crearSent", ()=>crearSent
+);
+function crearSent() {
+    const div = document.createElement("div");
+    div.style.height = '100vh';
+    div.style.backgroundColor = '#FF9BB3';
+    div.innerHTML = `\n<h3 class="mail__cont-h3">Sent</h3>\n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="./imagenes/Polygon 1.png" alt="boton">\n</div> \n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="./imagenes/Polygon 1.png" alt="boton">\n</div> \n\n`;
+    return div;
+}
+
+},{"@parcel/transformer-js/src/esmodule-helpers.js":"367CR"}]},["1vfup","SGsfi"], "SGsfi", "parcelRequire5c5e")
 
 //# sourceMappingURL=index.376f37e2.js.map

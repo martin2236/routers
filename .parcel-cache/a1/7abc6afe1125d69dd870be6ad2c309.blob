@@ -1,0 +1,26 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "router", ()=>router
+);
+parcelHelpers.export(exports, "goto", ()=>goto
+);
+function router(direccion) {
+    const rutas = [
+        {
+            path: /\/inbox/,
+            handler: ()=>{
+                console.log("perra");
+            }
+        },
+        {
+            path: /\/sent/,
+            handler: ()=>{
+                console.log("perra2");
+            }
+        }
+    ];
+}
+function goto(direccion) {
+    history.pushState({
+    }, "", direccion);
+}

@@ -1,0 +1,9 @@
+var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
+parcelHelpers.defineInteropFlag(exports);
+parcelHelpers.export(exports, "crearInbox", ()=>crearInbox
+);
+function crearInbox() {
+    const div = document.createElement("div");
+    div.innerHTML = `\n<h3 class="mail__cont-h3">inbox</h3>\n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="/imagenes/Polygon 1.png" alt="boton">\n</div> \n<div class="mail__cont-noti">\n    <p class="mail__cont-noti--p">un email</p>\n    <img class="mail__cont-noti--img" src="/imagenes/Polygon 1.png" alt="boton">\n</div> \n\n`;
+    return div;
+}

@@ -92,10 +92,12 @@ align-items: center;
 }
 .mail__button-inbox{
     grid-column: 1/2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     height: 61px;
     background: #393939;
-    border: none;
     color: #fff;
 }
 @media(min-width:666px){
@@ -108,9 +110,12 @@ align-items: center;
 .mail__button-sent{
     grid-column: 2/3;
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     height: 61px;
     background: #888888;
-    border: none;
+
     color: #fff;
 }
 @media(min-width:666px){
