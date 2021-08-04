@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/index.HASH_REF_11a42c8c33fa3b0b53add75c2529ed0a.css">
+    <script defer="" src="/index.HASH_REF_e5fd3240e23053dd93488167084c85cf.js"></script>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="header__logo">logo</div>
+            <form class="header__form" action="" method="GET">
+                <input class="header__form-input" type="text">
+                <input class="header__form-boton" type="input" name="buscar" value="buscar">
+            </form>
+        </header>
+        <section class="mail">
+            <div class="mail__buttons">
+                <a class="mail__button-inbox" href="/inbox">INBOX</a>
+                <a class="mail__button-sent" href="/sent">SENT</a>
+            </div>
+            <div class="mail__cont">
+                
+        </div>
+            
+        </section>
+    </div>
+</body>
+</html>

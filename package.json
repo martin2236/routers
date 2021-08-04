@@ -9,5 +9,7 @@
   "scripts": {
     "start": "parcel serve ./src/index.html",
     "build": "parcel build ./src/index.html"
-  }
+  },
+  "repository": "https://github.com/martin2236/routers.git",
+  "author": "Martin <martoxxx100@gmail.com>"
 }

@@ -1,0 +1,23 @@
+var _handlerRouter = require("./handlerRouter");
+function buscaRutas(link) {
+    link.addEventListener("click", function rutaInbox(e) {
+        e.preventDefault();
+        let ruta = this.getAttribute("href");
+        _handlerRouter.goto(ruta);
+    });
+}
+function main() {
+    const botonMail = document.querySelectorAll(".mail__cont-noti--p");
+    const inbox = document.querySelector(".mail__button-inbox");
+    const sent = document.querySelector(".mail__button-sent");
+    console.log("perra");
+    botonMail.forEach((item)=>{
+        buscaRutas(item);
+    });
+    buscaRutas(inbox);
+    buscaRutas(sent);
+    window.addEventListener("load", ()=>{
+        _handlerRouter.router(location.pathname);
+    });
+}
+main();
